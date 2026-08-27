@@ -13,6 +13,10 @@ void main() {
 // StatelessWidget - não possui estado que muda
 // Diz ao flutter que GradientContainer é um widget. Isso é necessário para que o Flutter saiba como chamar o widget e renderizá-lo na tela.
 class GradientContainer extends StatelessWidget {
+  // Construtor da classe GradientContainer.
+  // super.key é uma forma abreviada de passar o key para o construtor da classe pai (StatelessWidget).
+  const GradientContainer({super.key});
+
   @override
   Widget build(context) {
     return Container(

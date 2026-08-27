@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_text.dart';
+
 // StatelessWidget - não possui estado que muda
 // Diz ao flutter que GradientContainer é um widget. Isso é necessário para que o Flutter saiba como chamar o widget e renderizá-lo na tela.
 class GradientContainer extends StatelessWidget {
@@ -21,13 +23,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: Text(
-          'Hello, World!',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 28,
-          ),
-        ),
+        child: MyText('NINFA!'),
       ),
     );
   }

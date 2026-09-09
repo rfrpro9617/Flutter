@@ -11,7 +11,11 @@ class StartScreen extends StatelessWidget {
         // Ocupa somente o espaço necessário para os filhos
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset('assets/images/quiz-logo.png', width: 300),
+          Image.asset(
+            'assets/images/quiz-logo.png',
+             width: 300,
+             color: const Color.fromARGB(150, 255, 255, 255)
+          ),
           // Cria um espaçamento de 80 pixels entre a imagem e o texto
           const SizedBox(height: 80),
           const Text(

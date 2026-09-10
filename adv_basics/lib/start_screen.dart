@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final VoidCallback startQuiz;
 
   @override
   Widget build(context) {
@@ -13,8 +15,8 @@ class StartScreen extends StatelessWidget {
         children: [
           Image.asset(
             'assets/images/quiz-logo.png',
-             width: 300,
-             color: const Color.fromARGB(150, 255, 255, 255)
+            width: 300,
+            color: const Color.fromARGB(150, 255, 255, 255),
           ),
           // Cria um espaçamento de 80 pixels entre a imagem e o texto
           const SizedBox(height: 80),
@@ -27,7 +29,7 @@ class StartScreen extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: null,
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
             icon: const Icon(Icons.arrow_right_alt),
             label: const Text('Start Quiz'),
